@@ -1,39 +1,39 @@
 variable "appServiceName" {
-  type        = "string"
+  type        = string
   description = "The name of app service"
 }
 
 variable "appServicePlanName" {
-  type        = "string"
+  type        = string
   description = "The name of app service plan"
 }
 
 variable "resourceGroupName" {
-  type        = "string"
+  type        = string
   description = "The name of resource group"
 }
 
 variable "location" {
-  type        = "string"
+  type        = string
   description = "Location"
 }
 
 variable "subscriptionId" {
-  type        = "string"
+  type        = string
   description = "Subscription id"
 }
 
 variable "tenantId" {
-  type        = "string"
+  type        = string
   description = "Tenant id"
 }
 
-variable "clientId" {
-  type        = "string"
+variable clientId {
+  type        = string
   description = "Client id"
 }
 
 variable "clientSecret" {
-  type        = "string"
+  type        = string
   description = "Client secret"
 }
