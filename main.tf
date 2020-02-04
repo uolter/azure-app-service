@@ -1,3 +1,12 @@
+provider "azurerm" {
+  # whilst the `version` attribute is optional, we recommend pinning to a given version of the Provider
+  version         = "~> 1.42"
+  client_id       = var.clientId
+  subscription_id = var.subscriptionId
+  tenant_id       = var.tenantId
+  client_secret   = var.clientSecret
+}
+
 resource "azurerm_resource_group" "rg" {
   name     = var.resourceGroupName
   location = var.location
