@@ -12,11 +12,9 @@ pool:
 steps:
 - script: |
     echo See https://aka.ms/yaml
+    export TF_VAR_client_id=$(clientId)
+    export TF_VAR_client_secret=$(clientSecret)
     terraform init
-    terraform apply -var-file=envs/$(env).tfvars \ 
-      -var="subscriptionId=$(subscriptionId)" \
-      -var="tenantId=$(tenantId)" \
-      -var="clientId=$(clientId)" \
-      -var="clientSecret=$(clientSecret)" \
+    terraform apply -var-file=envs/$(env).tfvars \
       -auto-approve
   displayName: 'Run a multi-line script'
