@@ -14,9 +14,9 @@ steps:
     echo See https://aka.ms/yaml
     terraform init
     terraform apply -var-file=envs/$(env).tfvars \ 
-      -var subscriptionId=$(subscriptionId) \
-      -var tenantId=$(tenantId) \
-      -var clientId=$(clientId) \
-      -var clientSecret=$(clientSecret) \
+      -var="subscriptionId=$(subscriptionId)" \
+      -var="tenantId=$(tenantId)" \
+      -var="clientId=$(clientId)" \
+      -var="clientSecret=$(clientSecret)" \
       -auto-approve
   displayName: 'Run a multi-line script'
